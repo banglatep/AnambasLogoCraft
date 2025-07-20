@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AnambasLogoCraft - Prompt Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            for (let i = 1; i <= 10; i++) {
+                let particle = document.createElement('div');
+                particle.className = 'particle';
+                document.body.appendChild(particle);
+            }
+        });
+    </script>
+</head>
+<body>
+    <div class="banner">
+        <img src="logo.svg" alt="AnambasLogoCraft Banner" id="bannerImage">
+    </div>
+    <form id="logoForm">
+        <div class="form-group">
+            <label for="name">Nama Brand:</label>
+            <input type="text" id="name" placeholder="Contoh: BANG LATEP">
+        </div>
+        <div class="form-group">
+            <label for="style">Style:</label>
+            <select id="style">
+                <option value="Minimalis">Minimalis</option>
+                <option value="3D">3D</option>
+                <option value="Vintage/Retro">Vintage/Retro</option>
+                <option value="Modern">Modern</option>
+                <option value="Abstrak">Abstrak</option>
+                <option value="Tipografi">Tipografi</option>
+                <option value="Cyberpunk">Cyberpunk</option>
+                <option value="Futuristic">Futuristic</option>
+                <option value="Grunge">Grunge</option>
+                <option value="Neon">Neon</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="color">Warna:</label>
+            <input type="text" id="color" placeholder="Contoh: Biru, Merah, Gradient">
+        </div>
+        <div class="form-group">
+            <label for="element">Elemen:</label>
+            <input type="text" id="element" placeholder="Contoh: Wrench, Joystick, Hexagon">
+        </div>
+        <div class="form-group">
+            <label for="theme">Tema:</label>
+            <select id="theme">
+                <option value="Gaming">Gaming</option>
+                <option value="Football">Football</option>
+                <option value="Esport">Esport</option>
+                <option value="Streetwear">Streetwear</option>
+                <option value="Musik">Musik</option>
+                <option value="Teknologi/Futuristik">Teknologi/Futuristik</option>
+                <option value="Street Football">Street Football</option>
+                <option value="Retro Gaming">Retro Gaming</option>
+                <option value="Cyber Culture">Cyber Culture</option>
+                <option value="Urban Hype">Urban Hype</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="aspectRatio">Aspect Ratio:</label>
+            <select id="aspectRatio">
+                <option value="Persegi (1:1)">Persegi (1:1)</option>
+                <option value="Horizontal (3:1)">Horizontal (3:1)</option>
+                <option value="Vertikal (1:3)">Vertikal (1:3)</option>
+                <option value="Bulat">Bulat</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="font">Font/Tipografi:</label>
+            <select id="font">
+                <option value="Sans-serif (Montserrat, Roboto)">Sans-serif (Montserrat, Roboto)</option>
+                <option value="Serif (Times New Roman)">Serif (Times New Roman)</option>
+                <option value="Handwritten (Pacifico)">Handwritten (Pacifico)</option>
+                <option value="Decorative (Bebas Neue)">Decorative (Bebas Neue)</option>
+                <option value="Futuristic (Orbitron)">Futuristic (Orbitron)</option>
+                <option value="Graffiti (Graffiti)">Graffiti (Graffiti)</option>
+                <option value="Modern (Exo 2)">Modern (Exo 2)</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="background">Latar Belakang:</label>
+            <input type="text" id="background" placeholder="Contoh: Gradient, Solid Hitam">
+        </div>
+        <div class="form-group">
+            <label>Detail Teknis (Pilih beberapa):</label>
+            <div class="form-group" id="technicalDetails">
+                <span class="tag" data-value="8k">8k</span>
+                <span class="tag" data-value="Hyper-realistic">Hyper-realistic</span>
+                <span class="tag" data-value="3D rendering">3D rendering</span>
+                <span class="tag" data-value="Minimalis">Minimalis</span>
+                <span class="tag" data-value="High-resolution">High-resolution</span>
+                <span class="tag" data-value="Low-poly">Low-poly</span>
+                <span class="tag" data-value="Cinematic">Cinematic</span>
+                <span class="tag" data-value="Holographic">Holographic</span>
+                <span class="tag" data-value="Neon glow">Neon glow</span>
+                <span class="tag" data-value="Matte finish">Matte finish</span>
+            </div>
+        </div>
+        <button type="submit">Generate Prompt</button>
+    </form>
+    <div id="output"></div>
+    <button id="copyButton" style="display: none;">Copy Prompt</button>
+    <div class="wave"></div>
+    <script src="script.js"></script>
+</body>
+</html>
